@@ -76,3 +76,9 @@ header {
   color: #666;
   cursor: pointer;
 }
+
+.youtube {
+  /*position: absolute;*/
+  width: 100%;
+  height: 100%;
+}
