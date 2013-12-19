@@ -3,11 +3,9 @@ html, body {
 }
 
 body {
-  background: url('../images/photo-by-honozooloo.jpg');
-  background-size: cover;
   margin: 0;
-  padding-top: 40px;
   overflow: hidden;
+  background: #666;
 }
 
 #mask {
@@ -21,6 +19,14 @@ body {
 }
 
 .container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 630px;
+  padding-top: 50px;
+  background: url('../images/photo-by-honozooloo.jpg');
+  background-size: cover;
 }
 
 header {
@@ -31,8 +37,9 @@ header {
   color: #fff;
   font-size: 72px;
   font-family: helvetica;
+  letter-spacing: -1px;
   width: 100%;
-  text-shadow: 3px 3px 3px #000;
+  text-shadow: 2px 2px 2px #666;
 }
 
 #headline h1 {
