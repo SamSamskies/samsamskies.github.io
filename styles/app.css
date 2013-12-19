@@ -1,5 +1,9 @@
+body {
+  background: url('../images/photo-by-honozooloo.jpg');
+  background-size: cover;
+}
+
 .container {
   text-align: center;
-  vertical-align: middle;
   font-family: 'Patua One', cursive;
 }
