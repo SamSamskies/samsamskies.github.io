@@ -157,7 +157,7 @@ iframe:nth-child(n+2) {
     font-size: 48px;
   }
   .youtube {
-    height: 600px !important;
+    height: 576px !important;
     width: 1024px !important;
   }
 }
