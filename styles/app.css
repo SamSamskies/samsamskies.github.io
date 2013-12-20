@@ -162,16 +162,13 @@ iframe:nth-child(n+2) {
   }
 }
 
-@media (max-width: 780px) {
-  #headline {
-    font-size: 48px;
-  }
+@media (max-width: 768px) {
   body {
-    max-width: 1080px;
+    max-width: 768px;
   }
   .youtube {
     height: 438px !important;
-    width: 780px !important;
+    width: 768px !important;
   }
 }
 
@@ -180,7 +177,7 @@ iframe:nth-child(n+2) {
     font-size: 28px;
   }
   body {
-    max-width: 1080px;
+    max-width: 480px;
   }
   .youtube {
     height: 270px !important;
