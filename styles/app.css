@@ -59,7 +59,7 @@ header {
   margin: 40px 0;
 }
 
-#links a {
+#links a, span {
   color: #2b2b2b;
 }
 
