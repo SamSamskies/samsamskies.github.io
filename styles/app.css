@@ -157,9 +157,6 @@ iframe:nth-child(n+2) {
   #headline {
     font-size: 48px;
   }
-  body {
-    max-width: 1080px;
-  }
   .youtube {
     height: 600px !important;
     width: 1024px !important;
@@ -167,9 +164,6 @@ iframe:nth-child(n+2) {
 }
 
 @media (max-width: 768px) {
-  body {
-    max-width: 768px;
-  }
   .youtube {
     height: 438px !important;
     width: 768px !important;
@@ -179,9 +173,6 @@ iframe:nth-child(n+2) {
 @media (max-width: 480px) {
   #headline {
     font-size: 28px;
-  }
-  body {
-    max-width: 480px;
   }
   .youtube {
     height: 270px !important;
