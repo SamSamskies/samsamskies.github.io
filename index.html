@@ -67,6 +67,7 @@
     function handleEnterKey() {
       var key = event.which || event.keyCode
       if (key == 13) hideModal()
+      event.preventDefault()
     }
   </script>
 </body>
