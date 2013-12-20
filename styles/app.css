@@ -63,7 +63,7 @@ header {
 }
 
 #links a,span {
-  color: #2b2b2b;
+  color: #666;
 }
 
 #links.mobile .fa {
@@ -81,7 +81,7 @@ header {
 }
 
 #links .fa:hover {
-  color: #666;
+  color: #e0e0e0;
   cursor: pointer;
 }
 
