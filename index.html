@@ -43,10 +43,13 @@
       </iframe>
     </section>
   </div>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <script>
     var modal = document.getElementsByClassName('modal')[0]
     var modalMask = document.getElementById('modal-mask')
+
+    if (/Mobile|webOS/.test(navigator.userAgent)) {
+      document.getElementById('links').classList.add('mobile')
+    }
 
     function copyToClipboard() {
       modal.classList.add('active')

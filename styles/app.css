@@ -66,6 +66,10 @@ header {
   color: #2b2b2b;
 }
 
+#links.mobile .fa {
+  color: #666;
+}
+
 #links .fa {
   background: #000;
   border-radius: 50%;
