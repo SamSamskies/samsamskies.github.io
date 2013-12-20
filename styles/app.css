@@ -5,7 +5,6 @@ html,body {
 body {
   margin: 0 auto;
   background: #000;
-  max-width: 1280px;
 }
 
 #mask {
@@ -164,13 +163,19 @@ iframe:nth-child(n+2) {
 }
 
 @media (max-width: 768px) {
+  body {
+    width: 768px;
+  }
   .youtube {
-    height: 438px !important;
+    height: 432px !important;
     width: 768px !important;
   }
 }
 
 @media (max-width: 480px) {
+  body {
+    width: 480px;
+  }
   #headline {
     font-size: 28px;
   }
