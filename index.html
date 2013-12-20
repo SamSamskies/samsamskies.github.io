@@ -7,7 +7,8 @@
 <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 <title>Sam Samskies</title>
 </head>
-<body>
+<body onkeydown='handleEnterKey()'>
+  <div id='modal-mask' onclick='hideModal()'></div>
   <div class="container">
     <header>
       <div id='mask'></div>
@@ -26,6 +27,12 @@
           <i class="fa fa-linkedin fa-3x"></i>
         </a>
       </section>
+      <section class='modal'>
+        <form>
+          <label>"Copy to clipboard: Ctrl+C, Enter"</label>
+          <input type="text" name="email" value="samprofessional@gmail.com"readonly>
+        </form>
+      </section>
     </header>
     <section class="youtube">
       <iframe frameborder="0" height="100%" width="100%"
@@ -36,9 +43,26 @@
       </iframe>
     </section>
   </div>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <script>
+    var modal = document.getElementsByClassName('modal')[0]
+    var modalMask = document.getElementById('modal-mask')
+
     function copyToClipboard() {
-      window.prompt("Copy to clipboard: Ctrl+C, Enter", "samprofessional@gmail.com");
+      modal.style.display = 'block'
+      modalMask.style.display = 'block'
+      document.getElementsByTagName('input')[0].select()
+    }
+
+    function hideModal() {
+      if (event.target.className === "fa fa-envelope fa-3x") return
+      modal.style.display = 'none'
+      modalMask.style.display = 'none'
+    }
+
+    function handleEnterKey() {
+      var key = event.which || event.keyCode
+      if (key == 13) hideModal()
     }
   </script>
 </body>
