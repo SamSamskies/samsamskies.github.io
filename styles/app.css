@@ -1,4 +1,4 @@
-html, body {
+html,body {
   height: 100%;
 }
 
@@ -29,12 +29,14 @@ header {
   padding-top: 50px;
   text-align: center;
   background: url('../images/photo-by-honozooloo.jpg');
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
   background-size: cover;
   height: 630px;
   margin: 0 auto;
 }
 
-#headline, #my-photo, #links, .modal {
+#headline,#my-photo,#links,.modal {
   position: relative;
   z-index: 2;
 }
@@ -59,7 +61,7 @@ header {
   margin: 40px 0;
 }
 
-#links a, span {
+#links a,span {
   color: #2b2b2b;
 }
 
@@ -98,11 +100,20 @@ iframe:nth-child(n+2) {
   display: block;
   color: #d3d3d3;
   border-radius: 5px;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
   opacity: 0;
-  transition:all .5s;
+
+  -webkit-transition: all .5s;
+  -moz-transition: all .5s;
+  -o-transition: all .5s;
+  -ms-transition: all .5s;
+  transition: all .5s;
 }
 
 .modal.active {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: alpha(opacity=100);
   opacity: 1;
   margin-top: -280px;
   z-index: 4;
