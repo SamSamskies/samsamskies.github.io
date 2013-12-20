@@ -49,14 +49,14 @@
     var modalMask = document.getElementById('modal-mask')
 
     function copyToClipboard() {
-      modal.style.display = 'block'
+      modal.classList.add('active')
       modalMask.style.display = 'block'
       document.getElementsByTagName('input')[0].select()
     }
 
     function hideModal() {
       if (event.target.className === "fa fa-envelope fa-3x") return
-      modal.style.display = 'none'
+      modal.classList.remove('active')
       modalMask.style.display = 'none'
     }
 
