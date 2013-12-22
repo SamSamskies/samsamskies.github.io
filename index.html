@@ -9,9 +9,13 @@
 <title>Sam Samskies</title>
 </head>
 <body>
-  <div id='modal-mask'></div>
+  <section id="background-video" class="youtube">
+    <iframe frameborder="0"
+      src="https://youtube.com/embed/9D05ej8u-gU?autoplay=0&loop=1&controls=0&showinfo=0&autohide=1">
+    </iframe>
+  </section>
   <header>
-    <div id='mask'></div>
+    <div id='modal-mask'></div>
     <section id='headline'>
       <h1>BuildCreateInnovate</h1>
     </section>
@@ -27,12 +31,12 @@
         <i class="fa fa-linkedin fa-3x"></i>
       </a>
     </section>
-    <section class='modal'>
+    <div class='modal'>
       <form>
         <label>Copy to clipboard: Cmd/Ctrl+C, Enter</label>
         <input type="text" name="email" value="samprofessional@gmail.com">
       </form>
-    </section>
+    </div>
   </header>
   <div class="container">
     <section class="youtube">
@@ -46,7 +50,7 @@
   </div>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <script>
-    var $modal = $('header .modal')
+    var $modal = $('.modal')
     var $modalMask = $('#modal-mask')
 
     if (/Mobile|webOS/.test(navigator.userAgent)) {

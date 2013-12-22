@@ -7,7 +7,7 @@ body {
   background: #000;
 }
 
-#mask {
+/*#mask {
   position: absolute;
   top: 0;
   left: 0;
@@ -15,7 +15,7 @@ body {
   height: 100%;
   background: rgba(0,0,0,.7);
   z-index: 1;
-}
+}*/
 
 .container {
   position: relative;
@@ -25,15 +25,19 @@ body {
 }
 
 header {
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 1280px;
   padding-top: 50px;
   text-align: center;
-  background: url('../images/photo-by-honozooloo.jpg');
+/*  background: url('../images/photo-by-honozooloo.jpg');
   -webkit-background-size: cover;
   -moz-background-size: cover;
-  background-size: cover;
-  height: 630px;
-  margin: 0 auto;
+  background-size: cover;*/
+  /*height: 630px;*/
+  /*margin: 0 auto;*/
 }
 
 #headline,#my-photo,#links,.modal {
@@ -149,6 +153,9 @@ iframe:nth-child(n+2) {
 }
 
 @media (max-width: 1024px) {
+  body, header {
+    width: 1024px;
+  }
   #headline {
     font-size: 38px;
   }
@@ -159,8 +166,17 @@ iframe:nth-child(n+2) {
 }
 
 @media (max-width: 768px) {
-  body {
+  body, header {
     width: 768px;
+  }
+  #my-photo {
+    width: 160px;
+    border-radius: 50%;
+    border: 6px solid #ff0;
+    margin: 20px 0;
+  }
+  #headline {
+    margin: -20px 0 0 0;
   }
   .youtube, iframe {
     height: 432px !important;
@@ -169,11 +185,27 @@ iframe:nth-child(n+2) {
 }
 
 @media (max-width: 480px) {
-  body {
+  body, header {
     width: 480px;
+  }
+  #my-photo {
+    width: 80px;
+    border-radius: 50%;
+    border: 6px solid #ff0;
+    margin: 10px 0;
   }
   #headline {
     font-size: 24px;
+    margin: -20px 0 0 0;
+  }
+  #links .fa {
+    background: #000;
+    border-radius: 50%;
+    padding: 5px;
+    margin: -10 10px;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
   }
   .youtube, iframe {
     height: 270px !important;
