@@ -9,8 +9,8 @@ body {
 
 .container {
   position: relative;
-  top: -44px;
   left: 0;
+  width: 1280px;
   margin: 0 auto;
 }
 
@@ -74,7 +74,7 @@ header {
 }
 
 .youtube, iframe {
-  margin: 0 auto;
+  margin: -15px auto;
   width: 1280px;
   height: 720px;
 }
@@ -150,7 +150,7 @@ iframe:nth-child(n+2) {
 }
 
 @media (max-width: 768px) {
-  body, header {
+  body, header, .container {
     width: 768px;
   }
   #background-video {
@@ -167,13 +167,14 @@ iframe:nth-child(n+2) {
     height: 510px;
   }
   .youtube, iframe {
+    margin-top: -20px;
     height: 432px !important;
     width: 768px !important;
   }
 }
 
 @media (max-width: 480px) {
-  body, header {
+  body, header, .container {
     width: 480px;
   }
   #headline {
