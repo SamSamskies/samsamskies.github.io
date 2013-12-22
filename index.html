@@ -8,8 +8,8 @@
 <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 <title>Sam Samskies</title>
 </head>
-<body onkeydown='handleEnterKey()'>
-  <div id='modal-mask' onclick='hideModal()'></div>
+<body>
+  <div id='modal-mask'></div>
   <header>
     <div id='mask'></div>
     <section id='headline'>
@@ -20,7 +20,7 @@
       <a href="https://github.com/SamSamskies" title="GitHub">
         <i class="fa fa-github fa-3x"></i>
       </a>
-      <span onclick="copyToClipboard()" title="samprofessional@gmail.com">
+      <span id='email' title="samprofessional@gmail.com">
         <i class="fa fa-envelope fa-3x"></i>
       </span>
       <a href="http://www.linkedin.com/in/samsamskies" title="LinkedIn">
@@ -44,31 +44,37 @@
       </iframe>
     </section>
   </div>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <script>
-    var modal = document.getElementsByClassName('modal')[0]
-    var modalMask = document.getElementById('modal-mask')
+    var $modal = $('header .modal')
+    var $modalMask = $('#modal-mask')
 
     if (/Mobile|webOS/.test(navigator.userAgent)) {
-      document.getElementById('links').classList.add('mobile')
-    }
-
-    function copyToClipboard() {
-      modal.classList.add('active')
-      modalMask.style.display = 'block'
-      document.getElementsByTagName('input')[0].select()
+      $('#links').addClass('mobile')
     }
 
     function hideModal() {
-      if (event.target.className === "fa fa-envelope fa-3x") return
-      modal.classList.remove('active')
-      modalMask.style.display = 'none'
+      $modal.removeClass('active')
+      $modalMask.hide()
     }
 
-    function handleEnterKey() {
-      var key = event.which || event.keyCode
-      if (key == 13) hideModal()
-      event.preventDefault()
-    }
+    $('#email').on('click', function() {
+      $modal.addClass('active')
+      $modalMask.show()
+      $('input').select()
+    })
+
+    $('#modal-mask').on('click', function() {
+      hideModal()
+    })
+
+    $('body').on('keydown', function(e) {
+      var key = e.which || e.keyCode
+      if (key == 13) {
+        hideModal()
+        e.preventDefault()
+      }
+    })
   </script>
 </body>
 </html>
