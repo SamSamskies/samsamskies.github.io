@@ -169,14 +169,18 @@ iframe:nth-child(n+2) {
   body, header {
     width: 768px;
   }
-  #my-photo {
-    width: 160px;
-    border-radius: 50%;
-    border: 6px solid #ff0;
-    margin: 20px 0;
+  #background-video {
+    height: 600px
   }
-  #headline {
-    margin: -20px 0 0 0;
+  #background-video iframe {
+    display: none;
+  }
+  header {
+    background: url('../images/photo-by-honozooloo.jpg');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    height: 510px;
   }
   .youtube, iframe {
     height: 432px !important;
@@ -188,24 +192,8 @@ iframe:nth-child(n+2) {
   body, header {
     width: 480px;
   }
-  #my-photo {
-    width: 80px;
-    border-radius: 50%;
-    border: 6px solid #ff0;
-    margin: 10px 0;
-  }
   #headline {
     font-size: 24px;
-    margin: -20px 0 0 0;
-  }
-  #links .fa {
-    background: #000;
-    border-radius: 50%;
-    padding: 5px;
-    margin: -10 10px;
-    width: 60px;
-    height: 60px;
-    line-height: 60px;
   }
   .youtube, iframe {
     height: 270px !important;
