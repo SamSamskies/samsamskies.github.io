@@ -22,7 +22,6 @@ body {
   top: 0;
   left: 0;
   margin: 0 auto;
-  height: 100%;
 }
 
 header {
@@ -153,7 +152,7 @@ iframe:nth-child(n+2) {
   #headline {
     font-size: 38px;
   }
-  .youtube {
+  .youtube, iframe {
     height: 576px !important;
     width: 1024px !important;
   }
@@ -163,7 +162,7 @@ iframe:nth-child(n+2) {
   body {
     width: 768px;
   }
-  .youtube {
+  .youtube, iframe {
     height: 432px !important;
     width: 768px !important;
   }
@@ -176,7 +175,7 @@ iframe:nth-child(n+2) {
   #headline {
     font-size: 24px;
   }
-  .youtube {
+  .youtube, iframe {
     height: 270px !important;
     width: 480px !important;
   }
