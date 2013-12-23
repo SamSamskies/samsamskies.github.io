@@ -7,6 +7,10 @@ body {
   background: #000;
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
 .container {
   position: relative;
   left: 0;
