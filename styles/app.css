@@ -142,7 +142,7 @@ iframe:nth-child(n+2) {
 }
 
 @media (max-width: 1024px) {
-  body, header {
+  body, header, .container {
     width: 1024px;
   }
   #headline {
