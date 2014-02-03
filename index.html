@@ -33,10 +33,15 @@
         </a>
       </section>
       <div class='modal'>
-        <form>
-          <label>Copy to clipboard: Cmd/Ctrl+C, Enter</label>
-          <input type="text" name="email" value="samprofessional@gmail.com">
-        </form>
+        <div class='non-mobile'>
+          <form>
+            <label>Copy to clipboard: Cmd/Ctrl+C, Enter</label>
+            <input type="text" name="email" value="samprofessional@gmail.com">
+          </form>
+        </div>
+        <div class='mobile'>
+          <p>samprofessional@gmail.com</p>
+        </div>
       </div>
     </header>
     <section class="youtube">
@@ -55,6 +60,8 @@
 
     if (/Mobile|webOS/.test(navigator.userAgent)) {
       $('#links').addClass('mobile')
+      $('.non-mobile').hide()
+      $('.mobile').show()
     }
 
     function hideModal() {

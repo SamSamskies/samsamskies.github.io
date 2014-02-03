@@ -141,6 +141,10 @@ iframe:nth-child(n+2) {
   font-family: monospace;
 }
 
+.mobile {
+  display: none;
+}
+
 @media (max-width: 1024px) {
   body, header, .container {
     width: 1024px;
